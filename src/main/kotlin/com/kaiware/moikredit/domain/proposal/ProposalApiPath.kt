@@ -8,11 +8,10 @@ class ProposalApiPath{
         private const val basePath = "/proposal"
         private const val protectedPath = "${ApiPath.protectedPath}$basePath"
         private const val publicPath = "${ApiPath.publicPath}$basePath"
-
-        const val findByIdPath = "${protectedPath}/{id}"
+        
         const val findAllPaginated = "$protectedPath/all/{pageNumber}/{pageSize}"
 
-        const val savePath = "$publicPath/save"
+        const val savePath = publicPath
         const val updatePath = protectedPath
         const val deleteByIdPath = "$protectedPath/{id}"
     }

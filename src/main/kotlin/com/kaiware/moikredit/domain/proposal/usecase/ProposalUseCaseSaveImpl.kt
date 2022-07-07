@@ -15,7 +15,7 @@ class ProposalUseCaseSaveImpl (
         outPortSave.execute(
             Proposal(
                 name=saveDto.name,
-                email=saveDto.name,
+                email=saveDto.email,
                 number=saveDto.number,
                 checked=false,
             )

@@ -4,8 +4,8 @@ import com.kaiware.moikredit.ApiPath
 
 class ProductApi {
     companion object{
-        private const val protectedPath = "${ApiPath.protectedPath}/proposal"
-        private const val publicPath = "${ApiPath.publicPath}/proposal"
+        private const val protectedPath = "${ApiPath.protectedPath}/product"
+        private const val publicPath = "${ApiPath.publicPath}/product"
 
 
         const val findById = "$publicPath/{id}"

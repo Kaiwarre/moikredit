@@ -14,7 +14,7 @@ class ProposalUseCaseUpdateImpl(
 ): UseCaseUpdateAbstractImpl<Proposal,Long,ProposalUpdateDto>() {
     override fun execute(updateDto: ProposalUpdateDto) {
     val proposal = outPortFindById.execute(updateDto.id)
-    proposal.checked=true
+    proposal.checked=!proposal.checked
     outPortSave.execute(proposal)
 }
 }
