@@ -11,6 +11,7 @@ class ProductApi {
         const val findById = "$publicPath/{id}"
         const val findByIdFull = "$protectedPath/full/{id}"
         const val findAllPaginated = "$publicPath/all/{pageNumber}/{pageSize}"
+        const val findAll = "$publicPath/all"
 
         const val save = protectedPath
         const val update = protectedPath
