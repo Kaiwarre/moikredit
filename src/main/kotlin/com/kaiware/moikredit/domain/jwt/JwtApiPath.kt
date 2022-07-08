@@ -5,7 +5,7 @@ import com.kaiware.moikredit.ApiPath
 
 class JwtApiPath {
     companion object{
-        private const val basePath = "/authenticate/{lang}"
+        private const val basePath = "/authenticate"
         const val publicPath = "${ApiPath.publicPath}$basePath"
 
         const val generateJwtTokenPath = publicPath

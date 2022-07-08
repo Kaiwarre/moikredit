@@ -10,7 +10,13 @@ import org.springframework.stereotype.Component
 class ProductFullResponseDto(
     var id:Long,
     var name:String,
-    var dataList: List<ProductData> = emptyList()
+    var dataList: List<ProductData> = emptyList(),
+    var active:Boolean,
+    var max_sum:Long,
+    var min_sum:Long,
+    var percent:Long,
+    var max_duration:Long,
+    var min_duration:Long,
 ) : ResponseDtoI {
     @Component
     companion object : Mapper<Product, ProductFullResponseDto> {
@@ -18,6 +24,12 @@ class ProductFullResponseDto(
             return ProductFullResponseDto(
                 id = entity.id ?: 0,
                 name = entity.dataByLanguage(lang).name,
+                active=entity.active,
+                max_sum=entity.max_sum,
+                min_sum=entity.min_sum,
+                percent=entity.percent,
+                max_duration =entity.max_duration,
+                min_duration =entity.min_duration,
                 dataList = entity.dataList
             )
         }

@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.RequestBody
 
 @InPort
 class ProductInPortSaveImp(
-    private val ProductUseCaseSave: UseCaseSave<ProductSaveDto>
+    private val productUseCaseSave: UseCaseSave<ProductSaveDto>
 ): InPortSave<ProductSaveDto> {
     @PostMapping(ProductApi.save)
     override fun execute(@RequestBody saveDto: ProductSaveDto): Any {
-        ProductUseCaseSave.execute(saveDto)
+        productUseCaseSave.execute(saveDto)
         return ResponseEntity<Any>(HttpStatus.OK)
     }
 }
